@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -exo pipefail
+
 function cleanup {
     echo "exiting ganache-pid(${ganache_pid})"
     echo "exiting loom-pid(${loom_pid})"
@@ -13,7 +15,7 @@ function cleanup {
 
 REPO_ROOT=`pwd`
 LOOM_DIR=`pwd`/tmp/loom-plasma-$BUILD_TAG
-BUILD_NUMBER=214
+BUILD_NUMBER=235
 
 rm -rf  $LOOM_DIR; true
 mkdir -p $LOOM_DIR
